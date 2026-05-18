@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=Michroma&family=Orbitron:wght@400;800&family=Space+Grotesk:wght@300;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Connected Canvas | A Creative Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bring in the official p5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+
+    <!-- This container is where your p5.js interactive background will live -->
+    <div id="canvas-container"></div>
+
+    <!-- Your actual website content sits cleanly on top of the canvas -->
+    <main class="content-overlay">
+        <header>
+            <span class="badge">Casey Meets Code // Project 01</span>
+            <h1>Interactive Canvas</h1>
+            <p>A digital sandbox exploring the intersections of network architecture and creative code.</p>
+        </header>
+
+        <section class="actions">
+            <button class="btn-primary">GO ON...EXPLORE!</button><a href="https://github.com" target="_blank" class="btn-secondary">(( View Source Code ))</a>
+        </section>
+    </main>
+
+    <!-- Link your custom creative script last so the HTML is fully loaded first -->
+    <script src="sketch.js"></script>
+</body>
+</html>

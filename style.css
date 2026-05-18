@@ -1,0 +1,111 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    background-color: #0b0c10;
+    color: #ffffff;
+}
+
+/* 2. The Background Canvas */
+#canvas-container {
+    position: fixed;
+    top: 0;
+
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
+
+/* 3. The Interactive Layer */
+.content-overlay {
+    position: relative;
+    z-index: 1; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10% 8%;
+    background: linear-gradient(90deg, rgba(11,12,16,0.8) 0%, rgba(11,12,16,0) 100%);;
+    
+    /* This makes the whole overlay a hologram */
+    pointer-events: none; 
+}
+
+/* 4. The Content Blocks */
+/* We keep these as 'none' so the mouse reaches the quad THROUGH the text */
+header, .actions, p, h1 {
+    pointer-events: none;
+    max-width: 600px;
+}
+
+/* 5. The Solid Objects (Buttons & Links) */
+/* This is the ONLY stuff we want the mouse to hit */
+.btn-primary, 
+.btn-secondary,
+.actions a,
+button {
+    pointer-events: auto !important; 
+    cursor: pointer;
+}
+
+/* --- UI Styling --- */
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin: 1rem 0;
+    line-height: 1.1;
+}
+
+p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: #009fda;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.badge {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    color: #fd026e;
+    font-weight: 700;
+}
+
+.btn-primary {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #f9e300;
+    color: #0b0c10;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+}
+
+/*Optimized for p5.js interactivity */
